@@ -17,7 +17,7 @@
                 <div class="mainmenu pull-left">
                     <ul class="nav navbar-nav collapse navbar-collapse">
                         <li><a href="/" class="active">Home</a></li>
-                        <li><a href="#">Despre noi</a></li>
+                        <li><a href="#">Transport marfa</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -51,9 +51,9 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="col-sm-6">
-                                <h1><span>EMA</span>-CERAMICS ART</h1>
-                                <h2>Ceramica si portelanuri</h2>
-                                <p>Cadouri unice lucrate manual</p>
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Materiale de constructii</h2>
+                                <p>Asiguram transportul</p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
@@ -62,9 +62,9 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>EMA</span>-CERAMICS ART</h1>
-                                <h2>Ceramica si portelanuri</h2>
-                                <p>Cadouri unice lucrate manual</p>
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Materiale de constructii</h2>
+                                <p>Asiguram transportul</p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
@@ -73,9 +73,9 @@
                         </div>
                         <div class="item">
                             <div class="col-sm-6">
-                                <h1><span>EMA</span>-CERAMICS ART</h1>
-                                <h2>Ceramica si portelanuri</h2>
-                                <p>Cadouri unice lucrate manual</p>
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Materiale de constructii</h2>
+                                <p>Asiguram transportul</p>
                             </div>
                             <div class="col-sm-6">
                                 <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
