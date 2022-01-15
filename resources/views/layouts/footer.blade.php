@@ -8,7 +8,7 @@
                     <div class="single-widget">
                         <h2>Politica si Termeni Legali</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">Livrari & Retururi </a></li>
+                            <li><a href="livrari-retururi">Livrari & Retururi </a></li>
                             <li><a href="#">Termeni si conditii</a></li>
                             <li><a href="#">Politica de Confidentialitate</a></li>
                             <li><a href="#">Politica cookies</a></li>
@@ -53,7 +53,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2021 Ema Ceramics Art</p>
+                <p class="pull-left">Copyright © 2021 CREATIV TUB SRL</p>
                 <p class="pull-right"><a target="_blank" href="https://www.webtop.ro/">Website realizat de catre webtop.ro</a></p>
             </div>
         </div>

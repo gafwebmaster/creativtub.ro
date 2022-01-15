@@ -17,6 +17,11 @@ class ProductsController extends Controller
         return view('allproducts', ['products'=>$products, 'category'=>$category]);
     }
 
+    public function livrariRetururi(){
+        $category = Category::all();
+        return view('livrari_retururi', ['category'=>$category]);
+    }
+
     public function addProductToCart(Request $request, $id){
         // $request->session()->forget("cart");
         // $request->session()->flush();
