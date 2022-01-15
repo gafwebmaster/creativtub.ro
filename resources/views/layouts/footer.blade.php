@@ -3,18 +3,45 @@
     <div class="footer-widget">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-right">
+
+                <div class="col-sm-3 text-right">
                     <div class="single-widget">
+                        <h2>Politica si Termeni Legali</h2>
                         <ul class="nav nav-pills nav-stacked">
+                            <li><a href="#">Livrari & Retururi </a></li>
                             <li><a href="#">Termeni si conditii</a></li>
+                            <li><a href="#">Politica de Confidentialitate</a></li>
+                            <li><a href="#">Politica cookies</a></li>
+                            <li><a href="#">Metode de Plata </a></li>
+                            <li><a target="_blank" href="https://anpc.ro/">ANPC</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <div class="single-widget">
+                        <h2>Program</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="#">GDPR</a></li>
+                            <li>Luni - Vineri: 8:00 - 17:00pm​​​</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>Date de Contact</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><strong>Telefon:</strong> 0751-839-308</li>
+                            <li><strong>Email:</strong> contact@creativtub.ro</li>                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="single-widget">
+                        <h2>Sediu</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li>Str. Bucuresti nr. 216, Varteju, Jud. Ilfov (pe Centura Bucuresti)</li>
                         </ul>
                     </div>
                 </div>

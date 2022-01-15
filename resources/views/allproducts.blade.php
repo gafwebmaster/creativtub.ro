@@ -47,39 +47,69 @@
                         <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#slider-carousel" data-slide-to="1"></li>
                         <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        <li data-target="#slider-carousel" data-slide-to="3"></li>
+                        <li data-target="#slider-carousel" data-slide-to="4"></li>
+                        <li data-target="#slider-carousel" data-slide-to="5"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <h1><span>CREATIV</span> TUB</h1>
-                                <h2>Materiale de constructii</h2>
+                                <h2>Materiale metalurgice</h2>
                                 <p>Asiguram transportul</p>
                             </div>
-                            <div class="col-sm-6">
-                                <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/metalurgice.jpg')}}" class="girl img-responsive" alt="" />                                
                             </div>
                         </div>
                         <div class="item">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <h1><span>CREATIV</span> TUB</h1>
-                                <h2>Materiale de constructii</h2>
+                                <h2>Materiale constructii</h2>
                                 <p>Asiguram transportul</p>
                             </div>
-                            <div class="col-sm-6">
-                                <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/constructii.jpg')}}" class="girl img-responsive" alt="" />
                             </div>
                         </div>
                         <div class="item">
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <h1><span>CREATIV</span> TUB</h1>
-                                <h2>Materiale de constructii</h2>
+                                <h2>Sanitare</h2>
                                 <p>Asiguram transportul</p>
                             </div>
-                            <div class="col-sm-6">
-                                <img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-                                <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/sanitare.jpg')}}" class="girl img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-4">
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Unelte</h2>
+                                <p>Asiguram transportul</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/Unelte.jpg')}}" class="girl img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-4">
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Electrice</h2>
+                                <p>Asiguram transportul</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/Electrice.jpg')}}" class="girl img-responsive" alt="" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-4">
+                                <h1><span>CREATIV</span> TUB</h1>
+                                <h2>Echipamente gradina</h2>
+                                <p>Asiguram transportul</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img src="{{asset('images/home/Gradina.jpg')}}" class="girl img-responsive" alt="" />
                             </div>
                         </div>
                     </div>
@@ -103,124 +133,29 @@
                     <h2>Categorii</h2>
                     <div class="panel-group category-products" id="accordian">
                         <!--category-productsr-->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Bijuterii din Portelan de Limoges
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="sportswear" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Brose </a></li>
-                                        <li><a href="#">Cercei </a></li>
-                                        <li><a href="#">Pandantive </a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
+
+
+                        @foreach ($category as $categories)
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#accordian" href="#mens">
                                     <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Decoratiuni Pentru Casa si Vesela
+                                    {{$categories->denumire}}
                                     </a>
                                 </h4>
                             </div>
                             <div id="mens" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Boluri</a></li>
-                                        <li><a href="#">Cani Unicat si Personalizate</a></li>
-                                        <li><a href="#">Ceasuri Masa</a></li>
-                                        <li><a href="#">Ceasuri Perete</a></li>
-                                        <li><a href="#">Chivete Interior-Exterior</a></li>
-                                        <li><a href="#">Ghivece Flori</a></li>
-                                        <li><a href="#">Platouri</a></li>
-                                        <li><a href="#">Servicii Masa</a></li>
+                                    <ul>                                        
                                         <li><a href="#">Suporti Lumanari</a></li>
                                         <li><a href="#">Vaze Decorative</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Decoratiuni si Vaze Pentru Florarii
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="womens" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Figurine Pentru Decor Ghivece si Buchete</a></li>
-                                        <li><a href="#">Ghivece</a></li>
-                                        <li><a href="#">Vaze Ceramica</a></li>
-                                        <li><a href="#">Vaze Portelan</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#textile">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Textile
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="textile" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Decoratiuni Craciun</a></li>
-                                        <li><a href="#">Decoratiuni Paste</a></li>
-                                        <li><a href="#">Moda - Tricouri Pictate Manual</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#gift">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Decoratiuni pentru Gradina
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="gift" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <ul>
-                                        <li><a href="#">Figurine Decor Ghivece</a></li>
-                                        <li><a href="#">Figurine Decor Gradina</a></li>
-                                        <li><a href="#">Ghivece Flori</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="#">Decoratiuni si Vaze Pentru Florarii</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="{{route('menProducts')}}">Men</a></h4>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title"><a href="{{route('womenProducts')}}">Women</a></h4>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <!--/category-products-->
                 </div>

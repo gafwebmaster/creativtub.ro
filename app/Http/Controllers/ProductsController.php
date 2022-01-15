@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
+use App\Models\Category;
 use App\Cart;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class ProductsController extends Controller
 {
     public function index(){
         $products = Product::all();
-        return view('allproducts', compact('products'));
+        $category = Category::all();
+        return view('allproducts', ['products'=>$products, 'category'=>$category]);
     }
 
     public function addProductToCart(Request $request, $id){
