@@ -6,13 +6,13 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordian" href="#{{$categories->denumire}}">
+                    <a data-toggle="collapse" data-parent="#accordian" href="#{{$categories->category_name}}">
                     <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                    {{$categories->denumire}}
+                    {{$categories->category_name}}
                     </a>
                 </h4>
             </div>
-            <div id="{{$categories->denumire}}" class="panel-collapse collapse">
+            <div id="{{$categories->category_name}}" class="panel-collapse collapse">
                 <div class="panel-body">
                     <ul>                                        
                         <li><a href="#">Suporti Lumanari</a></li>

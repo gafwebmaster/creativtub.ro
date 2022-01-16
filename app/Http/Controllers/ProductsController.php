@@ -17,9 +17,9 @@ class ProductsController extends Controller
         return view('allproducts', ['products'=>$products, 'category'=>$category]);
     }
 
-    public function livrariRetururi(){
+    public function detaliiShop(){
         $category = Category::all();
-        return view('livrari_retururi', ['category'=>$category]);
+        return view('detaliiShop', ['category'=>$category]);
     }
 
     public function addProductToCart(Request $request, $id){

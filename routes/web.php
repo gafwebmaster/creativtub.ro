@@ -88,4 +88,4 @@ Route::get('/product/checkoutProducts/', [ProductsController::class, 'checkoutPr
 Route::post('/product/createOrder', [ProductsController::class, 'createOrder'])->name('createOrder');
 
 //Footer links
-Route::get('/livrari-retururi', [ProductsController::class, 'livrariRetururi'])->name('livrariRetururi');
+Route::get('/detalii', [ProductsController::class, 'detaliiShop']);

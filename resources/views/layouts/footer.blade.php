@@ -8,11 +8,11 @@
                     <div class="single-widget">
                         <h2>Politica si Termeni Legali</h2>
                         <ul class="nav nav-pills nav-stacked">
-                            <li><a href="livrari-retururi">Livrari & Retururi </a></li>
-                            <li><a href="#">Termeni si conditii</a></li>
-                            <li><a href="#">Politica de Confidentialitate</a></li>
-                            <li><a href="#">Politica cookies</a></li>
-                            <li><a href="#">Metode de Plata </a></li>
+                            <li><a href="detalii#livrari">Livrari & Retururi</a></li>
+                            <li><a href="detalii#termeni">Termeni si conditii</a></li>
+                            <li><a href="detalii#politicaConfidentialitate">Politica de Confidentialitate</a></li>
+                            <li><a href="detalii#politicaCookies">Politica cookies</a></li>
+                            <li><a href="detalii#metodePlata">Metode de Plata </a></li>
                             <li><a target="_blank" href="https://anpc.ro/">ANPC</a></li>
                         </ul>
                     </div>
