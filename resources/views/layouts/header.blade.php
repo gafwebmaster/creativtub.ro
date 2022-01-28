@@ -88,7 +88,7 @@
 				</div>
 			</div>
 		</div><!--/header-middle-->
-		<div class="header-bottom">
+		<div class="header-bottom" style="display: none">
 			<!--header-bottom-->
 			<div class="container">
 		

@@ -18,7 +18,7 @@ class ProductsController extends Controller
     }
 
     public function detaliiShop(){
-        $category = Category::all();
+        $category = Category::with(Subcatedory::class);    
         return view('detaliiShop', ['category'=>$category]);
     }
 

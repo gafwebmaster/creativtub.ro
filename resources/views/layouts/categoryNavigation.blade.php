@@ -1,8 +1,9 @@
 <div class="left-sidebar">
     <h2>Categorii</h2>
     <div class="panel-group category-products" id="accordian">
-        <!--category-productsr-->
+     
         @foreach ($category as $categories)
+            
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
@@ -14,14 +15,14 @@
             </div>
             <div id="{{$categories->category_name}}" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <ul>                                        
-                        <li><a href="#">Suporti Lumanari</a></li>
-                        <li><a href="#">Vaze Decorative</a></li>
+                    <ul> 
+                        @foreach ($categories->subcategories as $subcategory)                                       
+                            <li><a href="{{Str::slug($categories->category_name)}}/{{Str::slug($subcategory->subcategory_name)}}/{{$categories->id}}">{{$subcategory->subcategory_name}}</a></li>                            
+                        @endforeach
                     </ul>
                 </div>
             </div>
         </div>
-        @endforeach
+        @endforeach    
     </div>
-    <!--/category-products-->
 </div>
