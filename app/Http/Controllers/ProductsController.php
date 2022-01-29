@@ -12,9 +12,23 @@ use Illuminate\Routing\Controller;
 class ProductsController extends Controller
 {
     public function index(){
-        $products = Product::all();
+        $products = Product::limit(9)->get();
         $category = Category::all();
         return view('allproducts', ['products'=>$products, 'category'=>$category]);
+    }
+
+    public function productList(){
+        $id = last(request()->segments());
+        $category = Category::all();
+        $products = DB::table('products')->where('id_subcategory',$id)->get();
+        return view('categoryProducts', ['products'=>$products, 'category'=>$category]);
+    }
+
+    public function productPag(){
+        $productId = last(request()->segments());
+        $category = Category::all();
+        $selectedProduct = DB::table('products')->where('id',$productId)->get();
+        return view('del', ['product'=>$selectedProduct, 'category'=>$category]);
     }
 
     public function detaliiShop(){
@@ -41,6 +55,8 @@ class ProductsController extends Controller
         $products = DB::table('products')->where('type',"Men")->get();
         return view('menProducts', compact('products'));
     }
+
+
 
     public function womenProducts(){
         $products = DB::table('products')->where('type',"Women")->get();

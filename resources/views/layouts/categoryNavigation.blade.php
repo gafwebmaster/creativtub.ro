@@ -17,7 +17,7 @@
                 <div class="panel-body">
                     <ul> 
                         @foreach ($categories->subcategories as $subcategory)                                       
-                            <li><a href="{{Str::slug($categories->category_name)}}/{{Str::slug($subcategory->subcategory_name)}}/{{$categories->id}}">{{$subcategory->subcategory_name}}</a></li>                            
+                            <li><a href="/{{Str::slug($categories->category_name)}}/{{Str::slug($subcategory->subcategory_name)}}/{{$subcategory->id}}">{{$subcategory->subcategory_name}}</a></li>                            
                         @endforeach
                     </ul>
                 </div>

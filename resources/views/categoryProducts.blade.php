@@ -18,7 +18,7 @@
                                 <div class="productinfo text-center">
                                     <div class="imgThumb">
                                         <a href="/{{Str::slug($product->product_name)}}/{{$product->id}}">
-                                            <img src="{{Storage::disk('local')->url('product_images/'.$product->picture)}}" alt="" />
+                                            <img src="{{Storage::disk('local')->url('product_images/'.$product->product_images)}}" alt="" />
                                         </a>
                                     </div>
                                     <h2>{{ $product->price }}Ron</h2>

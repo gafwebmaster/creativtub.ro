@@ -89,3 +89,11 @@ Route::post('/product/createOrder', [ProductsController::class, 'createOrder'])-
 
 //Footer links
 Route::get('/detalii', [ProductsController::class, 'detaliiShop']);
+
+
+
+//Products page
+Route::get('/{cat}/{subcat}/{id}', [ProductsController::class, 'productList']);
+
+//Product page
+Route::get('/{cat}/{id}', [ProductsController::class, 'productPag']);
