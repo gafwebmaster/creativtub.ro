@@ -833,9 +833,10 @@ h2.title {
 }
 
 .product-image-wrapper {
-    border: 1px solid #F7F7F5;
+    border: 1px solid #ccc;
     overflow: hidden;
     margin-bottom: 30px;
+    padding-top: 20px;
 }
 
 .single-products {
@@ -871,7 +872,7 @@ h2.title {
 }
 
 .productinfo img {
-    width: 100%;
+    width: 100px;
 }
 
 .productinfo {
