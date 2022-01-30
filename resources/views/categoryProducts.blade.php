@@ -18,10 +18,14 @@
                                 <div class="productinfo text-center">
                                     <div class="imgThumb">
                                         <a href="/{{Str::slug($product->product_name)}}/{{$product->id}}">
-                                            <img src="{{Storage::disk('local')->url('product_images/'.$product->product_images)}}" alt="" />
+                                            <img src="{{Storage::disk('local')->url('product_images/'.$product->picture)}}" alt="" />
                                         </a>
                                     </div>
-                                    <h2>{{ $product->price }}Ron</h2>
+                                    @if($product->price =='livrare la comanda')         
+                                        <b>Disponibil la comanda</b>        
+                                    @else
+                                        <h2>{{ $product->price }}Ron</h2>    
+                                    @endif
                                     <p>{{ $product->product_name }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>

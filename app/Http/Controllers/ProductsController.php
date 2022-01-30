@@ -28,7 +28,7 @@ class ProductsController extends Controller
         $productId = last(request()->segments());
         $category = Category::all();
         $selectedProduct = DB::table('products')->where('id',$productId)->get();
-        return view('del', ['product'=>$selectedProduct, 'category'=>$category]);
+        return view('productPage', ['product'=>$selectedProduct, 'category'=>$category]);
     }
 
     public function detaliiShop(){

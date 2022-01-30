@@ -872,7 +872,8 @@ h2.title {
 }
 
 .productinfo img {
-    width: 100px;
+    width: 140px;
+    height: auto
 }
 
 .productinfo {
@@ -1207,12 +1208,12 @@ h2.title {
     border: 1px solid #F7F7F0;
     overflow: hidden;
     padding-bottom: 60px;
-    padding-left: 60px;
+    padding-left: 30px;
     position: relative;
 }
 
 .back {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .newarrival {
@@ -1281,7 +1282,6 @@ h2.title {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     margin-bottom: 10px;
-    margin-left: 20px;
 }
 
 .shop-details-tab {

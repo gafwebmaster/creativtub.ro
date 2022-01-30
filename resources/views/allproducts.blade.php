@@ -21,7 +21,14 @@
                                             <img src="{{Storage::disk('local')->url('product_images/'.$product->picture)}}" alt="" />
                                         </a>
                                     </div>
-                                    <h2>{{ $product->price }}Ron</h2>
+
+                                    @if($product->price =='livrare la comanda')         
+                                        Cere oferta        
+                                    @else
+                                        <h2>{{ $product->price }}Ron</h2>    
+                                    @endif
+
+                                    
                                     <p>{{ $product->product_name }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
