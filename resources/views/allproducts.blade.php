@@ -25,7 +25,7 @@
                                     @if($product->price =='livrare la comanda')         
                                         Cere oferta        
                                     @else
-                                        <h2>{{ $product->price }}Ron</h2>    
+                                        <h2>{{ $product->price * (0.1) + $product->price }}  Ron</h2>    
                                     @endif
 
                                     

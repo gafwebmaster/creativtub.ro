@@ -91,7 +91,6 @@ Route::post('/product/createOrder', [ProductsController::class, 'createOrder'])-
 Route::get('/detalii', [ProductsController::class, 'detaliiShop']);
 
 
-
 //Products page
 Route::get('/{cat}/{subcat}/{id}', [ProductsController::class, 'productList']);
 

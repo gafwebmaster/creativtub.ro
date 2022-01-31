@@ -70,17 +70,7 @@
                 </div>
                 
                 
-                @endforeach
-                
-
-
-
-
-
-
-
-
-
+                @endforeach           
 
 
                 </div>

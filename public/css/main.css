@@ -2444,3 +2444,13 @@ textarea {
     margin: 0;
     padding: 0;
 }
+
+/*Uncoment for shop*/
+.product-information h2,
+.add-to-cart,
+.cart,
+.navbar-nav
+{
+    display: none;
+}
+
