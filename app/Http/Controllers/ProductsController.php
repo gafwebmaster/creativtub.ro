@@ -20,7 +20,7 @@ class ProductsController extends Controller
     public function productList(){
         $id = last(request()->segments());
         $category = Category::all();
-        $products = DB::table('products')->where('id_subcategory',$id)->get();
+        $products = DB::table('products')->where('id_subcategory',$id)->paginate(15);
         return view('categoryProducts', ['products'=>$products, 'category'=>$category]);
     }
 

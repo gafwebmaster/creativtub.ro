@@ -53,7 +53,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-left">Copyright © 2021 CREATIV TUB SRL</p>
+                <p class="pull-left">Copyright © <?= date("Y") ?> CREATIV TUB SRL</p>
                 <p class="pull-right"><a target="_blank" href="https://www.webtop.ro/">Website realizat de catre webtop.ro</a></p>
             </div>
         </div>

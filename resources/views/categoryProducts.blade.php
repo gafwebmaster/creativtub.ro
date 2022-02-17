@@ -26,13 +26,14 @@
                                     @else
                                         <h2>{{ $product->price }}Ron</h2>    
                                     @endif
-                                    <p>{{ $product->product_name }}</p>
+                                    <p>{{ Str::limit($product->product_name, 50) }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
+                    {{ $products->links() }}
                 </div>
                 <!--features_items-->
             </div>

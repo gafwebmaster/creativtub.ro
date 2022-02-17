@@ -29,7 +29,7 @@
                                     @endif
 
                                     
-                                    <p>{{ $product->product_name }}</p>
+                                    <p>{{ Str::limit($product->product_name, 10) }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                             </div>

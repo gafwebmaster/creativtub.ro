@@ -32,7 +32,7 @@
                                     @if($detail->price =='livrare la comanda')         
                                     Cere oferta        
                                     @else
-                                        <h2>{{ $detail->price }}Ron</h2>    
+                                        <h2 class="price">{{ $detail->price }}Ron</h2>    
                                     @endif
                                     <a href="{{route('AddToCartProduct', ['id'=>$detail->id])}}" class="btn btn-fefault cart"><i class="fa fa-shopping-cart"></i>Adauga in cos</a>
                                 </span>
