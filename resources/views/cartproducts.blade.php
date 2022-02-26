@@ -13,8 +13,8 @@
                 <thead>
 
                     <tr class="cart_menu">
-                        <td class="image">Produs</td>
-                        <td class="description"></td>
+                        <td class="image"></td>
+                        <td class="description">Produs</td>
                         <td class="price">Pret</td>
                         <td class="quantity">Cantitate</td>
                         <td class="total">Total</td>
@@ -25,14 +25,14 @@
                     @foreach ($cartItems->items as $item)
                     <tr>
                         <td class="cart_product">
-                            <a href=""><img width="100" src="{{Storage::disk('local')->url('product_images/'.$item['data']['image'])}}"></a>
+                            <a href=""><img width="100" src="{{Storage::disk('local')->url('product_images/'.$item['data']['picture'])}}"></a>
                         </td>
                         <td class="cart_description">
                             <h4><a href="">{{$item['data']['name']}}</a></h4>
-                            <p>Produs Id: {{$item['data']['id']}}</p>
+                            <p class="ml">{{$item['data']['product_name']}}</p>
                         </td>
                         <td class="cart_price">
-                            <p>{{$item['data']['price']}}</p>
+                            <p> {{ $item['data']['price'] * (0.1) + $item['data']['price'] }}</p>
                         </td>
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
@@ -43,7 +43,7 @@
                             </div>
                         </td>
                         <td class="cart_total">
-                            <p class="cart_total_price">{{$item['totalSinglePrice']}}Ron</p>
+                            <p class="cart_total_price">{{$item['totalSinglePrice'] * (0.1) + $item['totalSinglePrice']}}Ron</p>
                         </td>
                         <td class="cart_delete">
                             <a class="cart_quantity_delete" href="{{route('DeleteItemFromCart',['id'=>$item['data']['id']])}}"><i class="fa fa-times"></i></a>
@@ -78,9 +78,9 @@
                         <div class="total_area">
                             <p>Cost comanda</p>
                             <ul>
-                                <li>Cost comanda <span>{{$cartItems->totalPrice}}Ron</span></li>
+                                <li>Cost comanda <span>{{$cartItems->totalPrice * (0.1) + $cartItems->totalPrice}}Ron</span></li>
                                 <li>Cost livrare <span>20Ron</span></li>
-                                <li><strong>Total</strong> <span>{{$cartItems->totalPrice+20}}Ron</span></li>
+                                <li><strong>Total</strong> <span>{{$cartItems->totalPrice * (0.1) + $cartItems->totalPrice+20}}Ron</span></li>
                             </ul>
                                 <button class="btn btn-default check_out" type="submit">Plaseaza comanda</a>
                         </div>

@@ -51,7 +51,9 @@
                     {{$order->message}}
                 </td>
                 <td class="cart_delete">
-                    Lista de produse aici
+                    {{-- @foreach($order->order_id as $item)                 
+                        {{$item->item_name}}
+                    @endforeach --}}
                 </td>
             </tr>
             @endforeach

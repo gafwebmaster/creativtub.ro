@@ -66,6 +66,10 @@ a#scrollUp i {
     font-size: 30px;
 }
 
+.ml{
+    margin-left: 20px;
+}
+
 
 /*************************
 *******Header CSS******
@@ -837,7 +841,6 @@ h2.title {
     overflow: hidden;
     margin-bottom: 30px;
     padding-top: 20px;
-    height: 300px;
 }
 
 .single-products {
@@ -892,7 +895,6 @@ h2.title {
     transition: height 500ms ease 0s;
     width: 100%;
     display: block;
-    opacity: ;
 }
 
 .single-products:hover .product-overlay {
@@ -2452,6 +2454,6 @@ textarea {
 .cart,
 .navbar-nav
 {
-    display: none;
+    #display: none;
 }
 

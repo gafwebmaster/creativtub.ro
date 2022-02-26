@@ -31,16 +31,24 @@
             <div class="sidebar-wrapper">
                 <div class="logo">
                     <a href="http://www.creative-tim.com" class="simple-text">
-                        EMA CERAMICS ART
+                        CREATIV TUB
                     </a>
                 </div>
                 <ul class="nav">
                     @if(Auth::user()->admin)
-                        is admin
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/createProductForm">
+                                <i class="nc-icon nc-chart-pie-35"></i>
+                                <p>Profil & adresa</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin/createProductForm">
+                                <i class="nc-icon nc-chart-pie-35"></i>
+                                <p>Istoric comenzi</p>
+                            </a>
+                        </li>
                     @else
-                        is user
-                    @endif
-
                     <li>
                         <a class="nav-link" href="/admin/orders">
                             <i class="nc-icon nc-notes"></i>
@@ -71,20 +79,8 @@
                             <p>Abonati</p>
                         </a>
                     </li>
-
-                    Useri
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/createProductForm">
-                            <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>Profil & adresa</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/createProductForm">
-                            <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>Istoric comenzi</p>
-                        </a>
-                    </li>
+                    @endif 
+                    
                 </ul>
             </div>
         </div>

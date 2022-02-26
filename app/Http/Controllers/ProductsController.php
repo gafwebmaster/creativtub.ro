@@ -51,17 +51,17 @@ class ProductsController extends Controller
         //return redirect()->route('allProducts');
     }
 
-    public function menProducts(){
-        $products = DB::table('products')->where('type',"Men")->get();
-        return view('menProducts', compact('products'));
-    }
+    // public function menProducts(){
+    //     $products = DB::table('products')->where('type',"Men")->get();
+    //     return view('menProducts', compact('products'));
+    // }
 
 
 
-    public function womenProducts(){
-        $products = DB::table('products')->where('type',"Women")->get();
-        return view('womenProducts', compact('products'));
-    }
+    // public function womenProducts(){
+    //     $products = DB::table('products')->where('type',"Women")->get();
+    //     return view('womenProducts', compact('products'));
+    // }
 
     public function search(Request $request){
         $searchTest = $request->get('searchText');
@@ -125,8 +125,6 @@ class ProductsController extends Controller
 
         $cart = Session::get('cart');
 
-
-
         $orderDetails = $request->all();
         $phone = $orderDetails['phone'];
         $email = $orderDetails['email'];
@@ -147,8 +145,6 @@ class ProductsController extends Controller
             "name"=>$fullName
         );
 
-
-
         $created_order_details = DB::table("orders")->insert($orderDetails);
 
         //cart is not empty
@@ -161,7 +157,7 @@ class ProductsController extends Controller
             foreach ($cart->items as $cart_item){
 
                 $item_id = $cart_item['data']['id'];
-                $item_name = $cart_item['data']['name'];
+                $item_name = $cart_item['data']['product_name'];
                 $item_price = $cart_item['data']['price'];
                 $quantity = $cart_item['quantity'];
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model\Order;
 
 class Product extends Model
 {
@@ -22,5 +23,9 @@ class Product extends Model
     public function getPriceAttribute($value){
         $newForm = $value;
         return $newForm;
+    }
+
+    public function orderDetails(){
+        return $this->belongsTo(Order::class);
     }
 }
