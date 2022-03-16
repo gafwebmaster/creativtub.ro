@@ -15,6 +15,7 @@ class CreateOrders extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('order_id');
+            $table->integer('user_id');
             $table->text('status');
             $table->text('name');
             $table->text('phone');
@@ -23,7 +24,8 @@ class CreateOrders extends Migration
             $table->text('businessName')->nullable();
             $table->text('cui')->nullable();
             $table->text('message')->nullable();
-});
+            $table->text('totalPrice');
+        });
     }
 
     /**

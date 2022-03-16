@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use App\Cart;
+use App\Mail\Order;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class ProductsController extends Controller
 {
@@ -50,18 +53,6 @@ class ProductsController extends Controller
         return redirect()->back();
         //return redirect()->route('allProducts');
     }
-
-    // public function menProducts(){
-    //     $products = DB::table('products')->where('type',"Men")->get();
-    //     return view('menProducts', compact('products'));
-    // }
-
-
-
-    // public function womenProducts(){
-    //     $products = DB::table('products')->where('type',"Women")->get();
-    //     return view('womenProducts', compact('products'));
-    // }
 
     public function search(Request $request){
         $searchTest = $request->get('searchText');
@@ -126,6 +117,7 @@ class ProductsController extends Controller
         $cart = Session::get('cart');
 
         $orderDetails = $request->all();
+        $userId = Auth::id();
         $phone = $orderDetails['phone'];
         $email = $orderDetails['email'];
         $address = $orderDetails['address'];
@@ -134,7 +126,8 @@ class ProductsController extends Controller
         $message = $orderDetails['message'];
         $fullName = $orderDetails['fullName'];
 
-        $orderDetails = array(
+        $orderDetails = array( 
+            "user_id" => $userId,           
             "status"=>"new",
             "phone"=>$phone,
             "email"=>$email,
@@ -142,7 +135,8 @@ class ProductsController extends Controller
             "businessName"=>$businessName,
             "cui"=>$cui,
             "message"=>$message,
-            "name"=>$fullName
+            "name"=>$fullName,
+            "totalPrice"=>"1000"
         );
 
         $created_order_details = DB::table("orders")->insert($orderDetails);
@@ -156,13 +150,14 @@ class ProductsController extends Controller
 
             foreach ($cart->items as $cart_item){
 
-                $item_id = $cart_item['data']['id'];
+                $item_id = $cart_item['data']['id'];                
                 $item_name = $cart_item['data']['product_name'];
-                $item_price = $cart_item['data']['price'];
+                $item_price = $cart_item['data']['incrised_price'];
                 $quantity = $cart_item['quantity'];
 
+
                 $newItemsInCurrentOrder = array(
-                    "item_id"=>$item_id,
+                    "item_id"=>$item_id,                    
                     "order_id"=>$order_id,
                     "item_name"=>$item_name,
                     "item_price"=>$item_price,
@@ -173,10 +168,15 @@ class ProductsController extends Controller
 
             }
 
+            //Send email
+            Mail::to(request('email'))->send(new Order($cart, $orderDetails));
+
             //delete cart
             Session::forget('cart');
             Session::flush();
             return redirect()->route('allProducts')->withsuccess("Multumim pentru comanda");
+
+            
         } else {
             return redirect()->route('allProducts');
         }
@@ -189,6 +189,6 @@ class ProductsController extends Controller
     public function seeAProduct($id){
         $selectedProduct = DB::table('products')->where('id',$id)->first();
         return view('productPage', ['selectedProduct'=>$selectedProduct]);
-    }
+    }    
 
 }

@@ -1,3 +1,4 @@
+
 @extends('layouts.admin')
 
 @section('body')
@@ -21,40 +22,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($adminOrders as $order)
+            @foreach($orderDetails as $order)
             <tr>
                 <td>
-                    {{$order->order_id}}
+                    {{$order->user_id}}
                 </td>
-                <td>
-                    {{$order->status}}
-                </td>
-                <td class="cart_price">
-                    {{$order->name}}
-                </td>
+               
                 <td class="cart_quantity">
                     {{$order->phone}}
                 </td>
-                <td class="cart_total">
-                    {{$order->email}}
-                </td>
-                <td class="cart_delete">
-                    {{$order->address}}
-                </td>
-                <td class="cart_delete">
-                    {{$order->businessName}}
-                </td>
-                <td class="cart_delete">
-                    {{$order->cui}}
-                </td>
-                <td class="cart_delete">
-                    {{$order->message}}
-                </td>
-                <td class="cart_delete">
-                    {{-- @foreach($order->order_id as $item)                 
-                        {{$item->item_name}}
-                    @endforeach --}}
-                </td>
+                
             </tr>
             @endforeach
         </tbody>

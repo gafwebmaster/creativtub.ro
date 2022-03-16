@@ -78,9 +78,9 @@
                         <div class="total_area">
                             <p>Cost comanda</p>
                             <ul>
-                                <li>Cost comanda <span>{{$cartItems->totalPrice * (0.1) + $cartItems->totalPrice}}Ron</span></li>
+                                <li>Cost comanda <span>{{$cartItems->totalPrice}}Ron</span></li>
                                 <li>Cost livrare <span>20Ron</span></li>
-                                <li><strong>Total</strong> <span>{{$cartItems->totalPrice * (0.1) + $cartItems->totalPrice+20}}Ron</span></li>
+                                <li><strong>Total</strong> <span>{{$cartItems->totalPrice+20}}Ron</span></li>
                             </ul>
                                 <button class="btn btn-default check_out" type="submit">Plaseaza comanda</a>
                         </div>

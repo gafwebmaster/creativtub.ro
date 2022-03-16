@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('id_category');
             $table->tinyInteger('id_subcategory');
             $table->decimal('price', 8, 2);
+            $table->decimal('incrised_price', 8, 2);
             $table->text('description_one');
             $table->text('description_two');
             $table->text('description_three');

@@ -22,12 +22,11 @@
                                         </a>
                                     </div>
 
-                                    @if($product->price =='livrare la comanda')         
+                                    @if($product->incrised_price =='0')         
                                         Cere oferta        
                                     @else
-                                        <h2>{{ $product->price * (0.1) + $product->price }}  Ron</h2>    
+                                        <h2>{{ $product->incrised_price }}  Ron</h2>    
                                     @endif
-
                                     
                                     <p>{{ Str::limit($product->product_name, 10) }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>

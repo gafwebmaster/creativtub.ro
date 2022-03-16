@@ -21,19 +21,22 @@
                                             <img src="{{Storage::disk('local')->url('product_images/'.$product->picture)}}" alt="" />
                                         </a>
                                     </div>
-                                    @if($product->price =='livrare la comanda')         
+                                    
+                                    <p>{{ Str::limit($product->product_name, 50) }}</p>
+                                    @if($product->price =='0')         
                                         <b>Disponibil la comanda</b>        
                                     @else
                                         <h2>{{ $product->price }}Ron</h2>    
                                     @endif
-                                    <p>{{ Str::limit($product->product_name, 50) }}</p>
                                     <a href="{{route('AddToCartProduct', ['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
+                   
                     {{ $products->links() }}
+                    
                 </div>
                 <!--features_items-->
             </div>
