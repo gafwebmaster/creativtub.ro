@@ -15,4 +15,5 @@ class OrderItem extends Model
         'item_price',
         'quantity'
     ];
+    /** Has many with order */
 }

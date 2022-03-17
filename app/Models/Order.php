@@ -17,4 +17,6 @@ class Order extends Model
         'address',
         'total_price'
     ];
+    
+    /** To do relatie order items has one with order */
 }

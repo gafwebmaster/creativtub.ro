@@ -114,14 +114,14 @@ class AdminProductsController extends Controller
     public function adminOrders(){
         //$adminOrders = Order::all();
 
-        // $adminOrders = DB::table('orders')
-        // ->join('orders','orders.order_id','order_items.order_id')
-        // ->select('orders.*')
-        // ->get();
+        $adminOrders = DB::table('orders')
+        ->join('orders','orders.order_id','order_items.order_id')
+        ->select('orders.*')
+        ->get();
 
-        $order = new Order();    
+        //$order = new Order();    
 
-        return view('admin.adminOrders', ['adminOrders'=>$adminOrders]);
+        return view('admin.adminOrders', compact('adminOrders'));
     }
 
     public function changeOrderStatus($id){
